@@ -1,0 +1,10 @@
+package com.codingdojo.advancedoop;
+
+public class ZooTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

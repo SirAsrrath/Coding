@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='my_style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Dojo Survey</h1>
+        </div>
+        <form action="/result" method="post" >
+            <div>
+                <label for="name"class="header">Name:</label><br>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label for="email" class="header">Email:</label><br>
+                <input type="email"  name="email">
+            </div>
+            <div>
+                <label class="header">Gender Identity:</label><br>
+                <input type="radio" name="gender_identity" value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender_identity" value="female" id="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender_identity" value="non-binary" id="non-binary">
+                <label for="non-binary">Non-Binary</label>
+                <input type="radio" name="gender_identity" value="na" id="na">
+                <label for="na">I prefer not to answer</label>
+            </div>
+            <div>
+                <label class="header">Favorite language</label><br>
+                <select name="language" ><br>
+                    <option>Java</option>
+                    <option>Python</option>
+                    <option>Ruby</option>
+                </select>
+            </div>
+            <div>
+                <label class="header">Dojo Location</label><br>
+                <select name="location" ><br>
+                    <option>San Jose</option>
+                    <option>Chicago</option>
+                    <option>Ruby</option>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" name="accept" id="accept">
+            <label for="accept">Yes, I would like to receive periodic email updates</label><br>
+            </div>
+            
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

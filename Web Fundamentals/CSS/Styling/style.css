@@ -1,0 +1,21 @@
+h1 {
+    background-color: black;
+    font-family: cursive;
+    font-weight: bold;
+    color: white;
+    
+}
+h2{
+    text-align: center;
+    background-color: rebeccapurple;
+    font-style: italic;
+    color: white;
+    font-family: cursive;
+}
+h3{
+    text-align: end;
+    background-color: aqua;
+    text-decoration: underline;
+    color: rebeccapurple;
+    font-family: cursive;
+}

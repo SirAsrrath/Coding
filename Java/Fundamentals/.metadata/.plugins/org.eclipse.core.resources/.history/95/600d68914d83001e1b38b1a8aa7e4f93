@@ -1,0 +1,5 @@
+package com.codingdojo.dojosandninjas.blackbelt.repositories;
+
+public interface TeamRepository {
+
+}

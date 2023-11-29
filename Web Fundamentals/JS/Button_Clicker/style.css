@@ -1,0 +1,98 @@
+.nav{
+    background-color: rgb(53, 51, 51);
+    width: 80%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    color: white;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links{
+    display: inline-flex;
+    
+    align-items: flex-end;
+    list-style-type: none;
+    font-family: cursive;
+    margin-right: 20px;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.nav-title {
+    font-family: cursive;
+    color: white;
+}
+a{
+    color: white;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.btn{
+    background-color: rgb(96, 102, 10);
+    color: white;
+    font-family: cursive;
+    box-shadow: 5px 5px  black;
+    height: 30px;
+}
+
+input{
+    height: 30px;
+}
+
+.lbox1{
+    width: 200px;
+    height: fit-content;
+    display: block;
+    justify-content: center;
+    padding: 10px;
+    font-size: larger;
+    margin-top: 10px;
+}
+
+.left1, .left2{
+    display: flex;
+    height: fit-content;
+    width: 400px;
+    border: 3px solid black;
+    align-items: center;
+    font-family: cursive;
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+h3{
+    font-style: italic;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.rbox{
+    width: fit-content;
+    height: fit-content;
+    font-family: cursive;
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 3px solid black;
+    padding: 5px 5px 10px 5px;
+}
+
+.btn2{
+    background-color: green;
+    color: black;
+    font-family: cursive;
+    box-shadow: 5px 5px  black;
+    height: 30px;
+    width: 200px;
+}
+
+#deco{
+    text-decoration: underline;
+    color: blue;
+}

@@ -1,0 +1,13 @@
+package com.codingdojo.dojosandninjas.blackbelt.repositories;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.codingdojo.dojosandninjas.blackbelt.models.Team;
+import com.codingdojo.dojosandninjas.blackbelt.models.User;
+
+public interface TeamRepository extends CrudRepository<Team ,Long>{
+	List<Team> findAll();
+	List<Team>findAllByDojo(User user);
+}

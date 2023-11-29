@@ -1,0 +1,5 @@
+package com.codingdojo.blackbelt.models;
+
+public class Player {
+
+}

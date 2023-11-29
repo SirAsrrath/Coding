@@ -1,0 +1,131 @@
+.nav{
+    background-color: rgb(53, 51, 51);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    color: white;
+    font-family: cursive;
+    align-items: center;
+}
+
+.nav-links{
+    display: inline-flex;
+    align-items: flex-end;
+    list-style-type: none;
+    margin-right: 60px;
+    margin-left: auto;
+    justify-content: space-between;
+    font-size: x-large;
+}
+
+.nav-title {
+    font-family: cursive;
+    margin: auto;
+}
+a{
+    color: white;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.main{
+    height: fit-content;
+    width: auto;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: block;
+}
+.cookie{
+    margin-top: 10px;
+    border: 3px solid black;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    padding: 10px;
+    width: auto;
+    position: fixed;
+    bottom: 0;
+}
+
+.header1{
+    display: flex;
+    font-size: x-large;
+    margin-left: 30px;
+    
+}
+
+.header2{
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-top: 10px;
+    height: fit-content;
+    border: solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    justify-content: space-between;
+
+}
+
+.tempchange{
+    justify-items: flex-end;
+    margin-left: 50px;
+}
+h3{
+    font-family: cursive;
+    font-weight: lighter;
+}
+
+h2{
+    font-family: cursive;
+}
+
+label{
+    font-family: cursive;
+    font-weight: bold;
+}
+
+h4 , .high1 , .high2, .high3, .high4{
+    font-family: cursive;
+    
+}
+.high1 , .high2, .high3, .high4{
+    color: red;
+    
+}
+.low1, .low2, .low3, .low4{
+    color: blue;
+}
+.btn{
+    background-color: rgb(110, 110, 189);
+    color: black;
+    font-family: cursive;
+    box-shadow: 5px 5px  black;
+}
+
+.week{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.weatherdisplay{
+    display: block;
+    text-justify: center;
+    background-color: gray;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid black;
+}
+
+.logo{
+    border-radius: 50%;
+    height: 150px;
+    border: 2px solid black;
+}
+
+.temps{
+    display: flex;
+    justify-content: space-around;
+}

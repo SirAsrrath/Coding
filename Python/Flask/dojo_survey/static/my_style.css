@@ -1,0 +1,13 @@
+.container{
+    height: fit-content;
+    background-color: gray;
+    display: block;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.header{
+    font-size: large;
+    font-weight: bolder;
+}

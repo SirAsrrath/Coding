@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <div>
+        <h2>Counter</h2>
+        <h2>{{session['count']}}</h2>
+        <h2>Visits</h2>
+        <h2>{{session['visits']}}</h2>
+        <div>
+            <form action="/multiple_visits", method="POST">
+                <button>Add 2 to the counter</button>
+            </form>
+            
+            <form action="/variable_visits" , method="POST">
+                <label for="num">Amount added to the counter:</label><br>
+                <input type="number" name="num">
+            </form>
+            
+            <form action="/destroy_session" , method = 'POST'>
+                <button>Reset</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

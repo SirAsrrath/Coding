@@ -1,0 +1,11 @@
+package com.codingdojo.blackbelt.repositories;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.codingdojo.blackbelt.models.Player;
+
+public interface PlayerRepository extends CrudRepository<Player,Long > {
+	List<Players> findAll();
+}

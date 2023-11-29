@@ -1,0 +1,226 @@
+.nav{
+    background-color: rgb(53, 51, 51);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    color: white;
+}
+
+.nav-links{
+    display: inline-flex;
+    
+    align-items: flex-end;
+    list-style-type: none;
+    font-family: cursive;
+    margin-right: 20px;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.nav-title {
+    font-family: cursive;
+    color: white;
+    margin: auto;
+}
+a{
+    color: white;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.btn{
+    background-color: aqua;
+    color: white;
+    font-family: cursive;
+    box-shadow: 5px 5px  black;
+}
+
+.main{
+    margin-top: 20px;
+    margin-left: 10% ;
+    height: 1500px;
+    width: 1000px;
+    display: flex;
+}
+
+.lbox1{
+    width: 600px;
+    height: 400px;
+    background-color: ivory;
+    border: 3px solid rgb(53, 51, 51);
+}
+
+.lboxa1{
+    width: 600px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.lbox2{
+    margin-top: 20 px;
+    width: 600px;
+    height: 300px;
+    background-color: ivory;
+    border: 3px solid rgb(53, 51, 51);
+    margin-top: 20px;
+}
+
+.lboxa2{
+    background-color:  rgb(53, 51, 51);
+    height: 100px;
+    width: 600px;
+    color: white;
+}
+
+.rbox1{
+    width: 350;
+    height: 200px;
+    background-color: ivory;
+    border: 3px solid rgb(53, 51, 51);
+}
+
+.rboxa1{
+    width: 350px;
+    height: 50px;
+    background-color:  rgb(53, 51, 51);
+    display: flex;
+    padding: 5px 5px 5px 5px;
+}
+
+.num1{
+    background-color: gray;
+    border-radius: 50%;
+    height: 30px;
+    width: 20px;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-family: cursive;
+}
+
+.rbox2{
+    margin-top: 20 px;
+    width: 350;
+    height: 350px;
+    background-color: ivory;
+    border: 3px solid rgb(53, 51, 51);
+    margin-top: 20px;
+    
+    
+}
+
+.rboxa2{
+    background-color:  rgb(53, 51, 51);
+    height: 50px;
+    width: 350px;
+    padding: 5px 5px 5px 5px ;
+    display: flex;
+}
+.right{
+    margin-left: 20px;
+}
+
+h2{
+    margin-top: 0px;
+    padding-top: 35px;
+    padding-left: 20px;
+    font-family: cursive;
+
+}
+
+h3, h4, h1{
+    
+    font-family: cursive;
+    padding-left: 20px;
+    padding-right: 20%;
+}
+h4{
+    color: gray;
+}
+
+p{
+    margin-left: 10px;
+    font-family: cursive;
+    color: white;
+}
+
+.num2{
+    width: 80px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    font-family: cursive;
+    background-color: gray;
+    padding-top: 10px;
+}
+
+.rimg{
+    height: 45px;
+    float: left;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.block{
+    display: flex;
+    align-items: center;
+    
+}
+
+.check{
+    
+    height: 45px;
+    
+    border-radius: 50%;
+}
+a{
+    margin-left: 20px;
+    font-family: cursive;
+    color: blue;
+    text-decoration: underline;
+}
+
+.rbox3{
+    
+    width: 350px;
+    height: 50px;
+    border: 3px;
+    border-style:  solid;
+    border-color: rgb(53, 51, 51);
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+.gear {
+    height: 30px;
+    margin-left: 20px;
+}
+
+.prof{margin-top: -50px;
+    margin-left: 20px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.map{
+    margin-left: 20px;
+    height: 40px;
+    float: left;
+    padding-right: 20px;
+}
+
+.text{
+    align-items: center;
+}
+
+H5{ margin-left: 20px;
+    line-height: 10px;
+    font-family: cursive;
+    
+}
+
+.navtext{
+    color: white;
+    text-decoration: none;
+}

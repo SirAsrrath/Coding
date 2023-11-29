@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DojosAndNinjas/src/main/webapp/WEB-INF/NewDojo.jsp&apos; to &apos;newDojo.jsp&apos;" description="Rename resource &apos;NewDojo.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/NewDojo.jsp" name="newDojo.jsp" stamp="1699605167088" updateReferences="true"/>
+</session>

@@ -1,0 +1,5 @@
+package com.codingdojo.blackbelt.repositories;
+
+public interface PlayerRepository {
+
+}

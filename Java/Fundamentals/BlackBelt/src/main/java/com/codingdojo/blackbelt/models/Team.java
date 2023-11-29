@@ -1,0 +1,124 @@
+package com.codingdojo.blackbelt.models;
+
+import java.util.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
+@Entity
+@Table(name="teams")
+public class Team {
+		
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+		
+	@NotEmpty(message="Name is required!")
+	@Size(min = 3, max = 40, message = "Name must be between 3 and 30 characters")
+	private String name;
+		
+	@NotBlank
+	private String skill;
+	
+	@NotBlank
+	private String gameday;
+	
+
+	
+	@Column(updatable=false)
+	private Date createdAt;
+	private Date updatedAt;
+	
+	// Relationships
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="user_id")
+	private User user;
+	
+
+	public Team() {}
+	
+	public Team(long id, String name, String skill, String gameday, Date createdAt, Date updatedAt, User user) {
+		this.id = id;
+		this.name = name;
+		this.skill = skill;
+		this.gameday= gameday;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
+		this.user = user;
+		
+	}
+
+	
+	//Getters & Setters 
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSkill() {
+		return skill;
+	}
+
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
+
+	public String getGameday() {
+		return gameday;
+	}
+
+	public void setGameday(String gameday) {
+		this.gameday = gameday;
+	}
+
+
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+}

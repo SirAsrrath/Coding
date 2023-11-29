@@ -1,0 +1,174 @@
+package com.codingdojo.blackbelt.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.codingdojo.blackbelt.models.Login;
+import com.codingdojo.blackbelt.models.Team;
+import com.codingdojo.blackbelt.models.User;
+
+import com.codingdojo.blackbelt.services.TeamService;
+import com.codingdojo.blackbelt.services.UserService;
+
+import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
+
+@Controller
+public class MainController {
+	
+	@Autowired
+	private UserService users;
+	
+	@Autowired
+	private TeamService teams;
+	
+
+	// main page
+	
+	@GetMapping("/")
+	public String index(Model model) {
+		
+		model.addAttribute("user", new User());
+		model.addAttribute("login", new Login());
+		return "index.jsp";
+	}
+	
+	//register post, initiate session, validation redirect
+	
+	@PostMapping("/register")
+	public String register(@Valid @ModelAttribute("user") User user,
+						   BindingResult result, Model model, HttpSession session) {
+		users.register(user,result);
+		if(result.hasErrors()) {
+
+	         model.addAttribute("login", new Login());
+	         return "index.jsp";
+	     }
+	     
+	     session.setAttribute("userId", user.getId());
+	 
+	     return "redirect:/home";
+	}
+	
+	//login post, initiate session, validation redirect
+	@PostMapping("/login")
+	 public String login(@Valid @ModelAttribute("login") Login login, 
+	         BindingResult result, Model model, HttpSession session) {
+	     
+	  
+	     User user = users.login(login, result);
+	 
+	     if(result.hasErrors()) {
+	         model.addAttribute("user", new User());
+	         return "index.jsp";
+	     }
+	 
+	     session.setAttribute("userId", user.getId());
+	 
+	     return "redirect:/home";
+	 }
+	
+	
+	
+	
+	//logout session clear
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.setAttribute("userId", null);
+		return "redirect:/";
+	}
+	
+	//dashboard 
+	
+	@GetMapping("/home")
+    public String home(Model model, HttpSession session) {
+    	
+		//login validation, redirects if not logged in 
+    	if(session.getAttribute("userId") == null) {
+    		return "redirect:/";
+    	}
+    	
+    	model.addAttribute("teams", teams.findAll());
+    	model.addAttribute("user", users.findById((Long)session.getAttribute("userId")));
+
+    	return "dashboard.jsp";
+    }
+	
+	// View Team 
+	
+	@GetMapping("/teams/{id}")
+    public String showTeam(Model model, @PathVariable("id") Long id, HttpSession session) {
+		
+		//login validation, redirects if not logged in 
+    	if(session.getAttribute("userId") == null) {
+    		return "redirect:/";
+    	}
+    	Team team = teams.findById(id);
+    	model.addAttribute("team", team);
+    	model.addAttribute("user", users.findById((Long)session.getAttribute("userId")));
+
+    	return "showTeam.jsp";
+    }
+	
+	// Create Team & Post
+	
+    @GetMapping("/teams/new")
+    public String newTeam(@ModelAttribute("team") Team team, Model model, HttpSession session) {
+    	
+    	User user = users.findById((Long)session.getAttribute("userId"));
+    	model.addAttribute("user", user);
+    	
+    	return "newTeam.jsp";
+    }
+    
+    @PostMapping("/teams/create")
+    public String createTeam(@Valid @ModelAttribute("team") Team team, BindingResult result) {
+
+    	if (result.hasErrors()) {
+    		return "newTeam.jsp";
+    	}
+    	
+    	teams.createTeam(team);
+    	
+    	return "redirect:/home";
+    }
+    
+    // Edit Team & Post
+    @RequestMapping("/edit/{id}")
+    public String editTeam(Model model, @PathVariable("id") Long id) {
+    	Team team1 = teams.findById(id);
+    	model.addAttribute("team",team1);
+    	return "editTeam.jsp";
+    }
+    
+	@PostMapping("/update/{id}")
+	public String updateTeam(
+			@PathVariable("id") Long id, 
+			Model model, 
+			@Valid @ModelAttribute("team") Team team, 
+			BindingResult result) {
+		if(result.hasErrors()) {
+			model.addAttribute("team", teams.findById(id));
+			return "redirect:/edit/{id}";
+		}else {
+			teams.updateTeam(team);
+			return "redirect:/home";
+		}
+	}
+	
+	// Delete Team
+	@RequestMapping("/teams/delete/{id}")
+		public String deleteTeam(@PathVariable("id") Long id) {
+			Team team = teams.findById(id);
+			teams.deleteTeam(team);
+			return "redirect:/home";
+	    
+	}
+}

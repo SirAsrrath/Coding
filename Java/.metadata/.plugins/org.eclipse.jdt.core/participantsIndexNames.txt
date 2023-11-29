@@ -1,0 +1,19 @@
+INDEX VERSION 1.134
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2891669877.index
+\DojosAndNinjas\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1525818798.index
+\BlackBelt\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3926107246.index
+\FruityLoops\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2306494606.index
+\SaveTravels\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2399860734.index
+\DaikichiPathVariables\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2149153446.index
+\LoginAndRegistration\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1957203185.index
+\OmikujiForm\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2216724743.index
+\OmikujiForm\src\main\java
+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2787073166.index
+\DaikichiPathVariables\src\main\java

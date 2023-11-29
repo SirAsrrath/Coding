@@ -1,0 +1,7 @@
+package com.codingdojo.dojosandninjas.blackbelt.services;
+
+
+@Service
+public class TeamService {
+	private final TeamRepository teamRepository;
+}

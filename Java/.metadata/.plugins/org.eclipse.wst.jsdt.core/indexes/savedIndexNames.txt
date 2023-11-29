@@ -1,0 +1,12 @@
+INDEX VERSION 1.4+C:\Users\fanta\OneDrive\Desktop\Coding\Java\Fundamentals\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3951771284.index
+2286740993.index
+2488851109.index
+246379512.index
+2615207119.index
+4058127451.index
+3007437884.index
+4126974045.index
+2491499936.index
+3112618849.index
+356680389.index
